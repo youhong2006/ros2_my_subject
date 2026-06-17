@@ -6,6 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotModel1
+        - /RobotModel1/Status1
         - /RobotModel1/Description Topic1
       Splitter Ratio: 0.5
     Tree Height: 707
@@ -116,35 +118,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        arm_1_link:
-          Value: true
-        arm_2_link:
-          Value: true
-        arm_3_link:
-          Value: true
-        base_link:
-          Value: true
-        gripper_left_link:
-          Value: true
-        gripper_right_link:
-          Value: true
-        hand_link:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          arm_1_link:
-            arm_2_link:
-              arm_3_link:
-                hand_link:
-                  gripper_left_link:
-                    {}
-                  gripper_right_link:
-                    {}
+        {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -208,10 +188,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5553985834121704
+      Pitch: 0.8053985834121704
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.9053986072540283
+      Yaw: 1.8203985691070557
     Saved: ~
 Window Geometry:
   Displays:

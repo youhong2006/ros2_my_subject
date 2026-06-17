@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <set_parameter name="use_sim_time" value="true" />
+
+  <node pkg="robot_state_publisher" exec="robot_state_publisher" output="screen">
+    <param name="robot_description" 
+           value="$(command 'xacro $(find-pkg-share my_robot_moveit_config)/config/test_robot.urdf.xacro')" 
+           type="str" />
+  </node>
+
+  <node pkg="ros_gz_sim" exec="create" output="screen"
+        args="-topic /robot_description -name test_robot -z 0.1" />
+
+  <node pkg="controller_manager" exec="spawner" output="screen" args="joint_state_broadcaster" />
+
+  <node pkg="rviz2" exec="rviz2" output="screen" args="-d $(find-pkg-share my_first)/config/config.rviz" />
+</launch>

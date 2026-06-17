@@ -1,9 +1,0 @@
-/home/user/ros2_ws/build/my_first/CMakeFiles/uninstall.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/my_first_uninstall.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/test.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/edit_cache.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/rebuild_cache.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/list_install_components.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/install.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/install/local.dir
-/home/user/ros2_ws/build/my_first/CMakeFiles/install/strip.dir

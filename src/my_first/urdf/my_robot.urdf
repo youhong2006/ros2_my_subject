@@ -6,6 +6,7 @@
   <material name="red"><color rgba="1.0 0.0 0.0 1.0"/></material>
   <material name="yellow"><color rgba="1.0 1.0 0.0 1.0"/></material>
   <material name="pink"><color rgba="1.0 0.75 0.8 1.0"/></material>
+
   <link name="base_link">
     <visual>
       <geometry><box size="0.2 0.2 0.3"/></geometry>
@@ -14,6 +15,11 @@
     <collision>
       <geometry><box size="0.2 0.2 0.3"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="50.0"/>
+      <inertia ixx="0.02167" ixy="0.0" ixz="0.0" iyy="0.02167" iyz="0.0" izz="0.01333"/>
+    </inertial>
   </link>
 
   <joint name="arm_0_joint" type="revolute">
@@ -34,6 +40,11 @@
       <origin xyz="0 0 0.25" rpy="0 0 0"/>
       <geometry><cylinder radius="0.05" length="0.5"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.02145" ixy="0.0" ixz="0.0" iyy="0.02145" iyz="0.0" izz="0.00125"/>
+    </inertial>
   </link>
 
   <joint name="arm_1_joint" type="revolute">
@@ -54,6 +65,11 @@
       <origin xyz="0 0 0.25" rpy="0 0 0"/>
       <geometry><cylinder radius="0.05" length="0.5"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.02145" ixy="0.0" ixz="0.0" iyy="0.02145" iyz="0.0" izz="0.00125"/>
+    </inertial>
   </link>
 
   <joint name="arm_2_joint" type="revolute">
@@ -74,6 +90,11 @@
       <origin xyz="0 0 0.25" rpy="0 0 0"/>
       <geometry><cylinder radius="0.05" length="0.5"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.02145" ixy="0.0" ixz="0.0" iyy="0.02145" iyz="0.0" izz="0.00125"/>
+    </inertial>
   </link>
 
   <joint name="arm_3_joint" type="revolute">
@@ -94,6 +115,11 @@
       <origin xyz="0 0 0.025" rpy="0 0 0"/>
       <geometry><box size="0.06 0.2 0.05"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0.025" rpy="0 0 0"/>
+      <mass value="0.5"/>
+      <inertia ixx="0.00177" ixy="0.0" ixz="0.0" iyy="0.00025" iyz="0.0" izz="0.00181"/>
+    </inertial>
   </link>
 
   <joint name="gripper_1_joint" type="prismatic">
@@ -114,6 +140,11 @@
       <origin xyz="0 0 0.04" rpy="0 0 0"/>
       <geometry><box size="0.04 0.02 0.08"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.000113" ixy="0.0" ixz="0.0" iyy="0.000133" iyz="0.0" izz="0.000033"/>
+    </inertial>
   </link>
 
   <joint name="gripper_2_joint" type="prismatic">
@@ -134,6 +165,11 @@
       <origin xyz="0 0 0.04" rpy="0 0 0"/>
       <geometry><box size="0.04 0.02 0.08"/></geometry>
     </collision>
+    <inertial>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.000113" ixy="0.0" ixz="0.0" iyy="0.000133" iyz="0.0" izz="0.000033"/>
+    </inertial>
   </link>
 
 </robot>

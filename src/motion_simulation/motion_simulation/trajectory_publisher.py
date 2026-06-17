@@ -13,9 +13,7 @@ class TrajectoryPublisher(Node):
         
         # 建立定時器，每 50 毫秒執行一次 [cite: 185]
         self.timer_ = self.create_timer(0.05, self.timer_callback)
-        
-        # 定義 5 個姿態點，這次要填入 6 個關節的數值 [cite: 191]
-        # 關節順序對應：[arm_0_joint, arm_1_joint, arm_2_joint, arm_3_joint, gripper_1_joint, gripper_2_joint]
+
         self.points = [
             [0.0,   0.0,   0.0,   0.0,   0.0,  0.0],
             [1.57,  0.5,  -0.5,   0.5,   0.04, 0.04],
@@ -42,8 +40,7 @@ class TrajectoryPublisher(Node):
             'gripper_1_joint', 
             'gripper_2_joint'
         ]
-        
-        # 線性內插計算 [cite: 192]
+
         p1 = self.points[self.current_point_idx]
         p2 = self.points[self.next_point_idx]
         
