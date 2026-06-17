@@ -6,7 +6,7 @@
     <param name="robot_description" value="$(file-content $(var urdf_file))" type="str" />
   </node>
 
-  <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" output="screen" />
+  <node pkg="motion_simulation" exec="trajectory_publisher" output="screen" />
 
   <node pkg="rviz2" exec="rviz2" output="screen" args="-d $(find-pkg-share my_first)/config/config.rviz" />
 </launch>

@@ -1,10 +1,139 @@
-<?xml version='1.0'?>
+<?xml version="1.0"?>
 <robot name="test_robot">
-    <link name="base_link">
-        <visual>
-            <geometry>
-                <box size="0.5 0.5 0.5"/>
-            </geometry>
-        </visual>
-    </link>
+
+  <material name="blue"><color rgba="0.0 0.0 1.0 1.0"/></material>
+  <material name="white"><color rgba="1.0 1.0 1.0 1.0"/></material>
+  <material name="red"><color rgba="1.0 0.0 0.0 1.0"/></material>
+  <material name="yellow"><color rgba="1.0 1.0 0.0 1.0"/></material>
+  <material name="pink"><color rgba="1.0 0.75 0.8 1.0"/></material>
+  <link name="base_link">
+    <visual>
+      <geometry><box size="0.2 0.2 0.3"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry><box size="0.2 0.2 0.3"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="arm_0_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="arm_1_link"/>
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+  </joint>
+
+  <link name="arm_1_link">
+    <visual>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.5"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.5"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="arm_1_joint" type="revolute">
+    <parent link="arm_1_link"/>
+    <child link="arm_2_link"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0"/>
+  </joint>
+
+  <link name="arm_2_link">
+    <visual>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.5"/></geometry>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.5"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="arm_2_joint" type="revolute">
+    <parent link="arm_2_link"/>
+    <child link="arm_3_link"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0"/>
+  </joint>
+  
+  <link name="arm_3_link">
+    <visual>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.5"/></geometry>
+      <material name="pink"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.5"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="arm_3_joint" type="revolute">
+    <parent link="arm_3_link"/>
+    <child link="hand_link"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0"/>
+  </joint>
+
+  <link name="hand_link">
+    <visual>
+      <origin xyz="0 0 0.025" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.2 0.05"/></geometry>
+      <material name="yellow"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.025" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.2 0.05"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_1_joint" type="prismatic">
+    <parent link="hand_link"/>
+    <child link="gripper_left_link"/>
+    <origin xyz="0 0.08 0.05" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0.0" upper="0.06" effort="5.0" velocity="0.5"/>
+  </joint>
+
+  <link name="gripper_left_link">
+    <visual>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <geometry><box size="0.04 0.02 0.08"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <geometry><box size="0.04 0.02 0.08"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_2_joint" type="prismatic">
+    <parent link="hand_link"/>
+    <child link="gripper_right_link"/>
+    <origin xyz="0 -0.08 0.05" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0.0" upper="0.06" effort="5.0" velocity="0.5"/>
+  </joint>
+
+  <link name="gripper_right_link">
+    <visual>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <geometry><box size="0.04 0.02 0.08"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <geometry><box size="0.04 0.02 0.08"/></geometry>
+    </collision>
+  </link>
+
 </robot>
