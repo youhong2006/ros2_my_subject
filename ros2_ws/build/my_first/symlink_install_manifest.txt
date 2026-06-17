@@ -1,0 +1,15 @@
+/home/user/ros2_ws/install/my_first/share/ament_index/resource_index/package_run_dependencies/my_first
+/home/user/ros2_ws/install/my_first/share/ament_index/resource_index/parent_prefix_path/my_first
+/home/user/ros2_ws/install/my_first/share/my_first/environment/ament_prefix_path.sh
+/home/user/ros2_ws/install/my_first/share/my_first/environment/ament_prefix_path.dsv
+/home/user/ros2_ws/install/my_first/share/my_first/environment/path.sh
+/home/user/ros2_ws/install/my_first/share/my_first/environment/path.dsv
+/home/user/ros2_ws/install/my_first/share/my_first/local_setup.bash
+/home/user/ros2_ws/install/my_first/share/my_first/local_setup.sh
+/home/user/ros2_ws/install/my_first/share/my_first/local_setup.zsh
+/home/user/ros2_ws/install/my_first/share/my_first/local_setup.dsv
+/home/user/ros2_ws/install/my_first/share/my_first/package.dsv
+/home/user/ros2_ws/install/my_first/share/ament_index/resource_index/packages/my_first
+/home/user/ros2_ws/install/my_first/share/my_first/cmake/my_firstConfig.cmake
+/home/user/ros2_ws/install/my_first/share/my_first/cmake/my_firstConfig-version.cmake
+/home/user/ros2_ws/install/my_first/share/my_first/package.xml
